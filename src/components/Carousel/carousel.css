@@ -41,8 +41,8 @@ div.swiper-pagination {
 span.swiper-pagination-bullet {
   width: 16px;
   height: 16px;
-  flex-shrink: 0; 
-  border: 1px solid #ABB5BE;
+  flex-shrink: 0;
+  border: 1px solid #abb5be;
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -52,4 +52,24 @@ span.swiper-pagination-bullet {
   border: 0px;
 }
 
+@media only screen and (max-width: 800px) {
 
+  .carousel__container {
+    padding: 16px 0px 16px 0px;
+  }
+
+  .swiper-slide img {
+    height: 111px;
+  }
+
+  div.swiper-pagination {
+    position: relative;
+    padding-top: 0.75rem;
+  }
+
+  span.swiper-pagination-bullet, .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 8px;
+    height: 8px;
+  }
+
+}

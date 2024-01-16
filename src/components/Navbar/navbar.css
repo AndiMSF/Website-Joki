@@ -44,3 +44,38 @@ div.navbar__middle h1:hover {
   line-height: normal;
   margin-bottom: 0;
 }
+
+.hamburger__container {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .hamburger__container {
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+transition: background-color 0.3s ease;
+  }
+
+  .hamburger__container:hover {
+    background-color: var(--Gray-300);
+    cursor: pointer;
+  }
+
+
+  .hamburger__container .line {
+    height: 10px;
+    width: 100%;
+  }
+
+  .navbar__middle {
+    display: none;
+  }
+
+  .navbar__right {
+    display: none;
+  }
+}

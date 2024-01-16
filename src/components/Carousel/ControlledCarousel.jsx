@@ -45,7 +45,6 @@ const ControlledCarousel = () => {
         }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
-        navigation={true}
       >
         <SwiperSlide>
           <img src={valorant} />
@@ -55,9 +54,6 @@ const ControlledCarousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={genshin} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={valorant} />
         </SwiperSlide>
       </Swiper>
     </div>
