@@ -14,19 +14,19 @@ const Charts = () => {
 
   const data = [
     {
-      name: "Page C",
+      name: "Order",
       uv: 3,
     },
     {
-      name: "Page D",
+      name: "Completed",
       uv: 4,
     },
     {
-      name: "Page E",
+      name: "OnProgress",
       uv: 5,
     },
     {
-      name: "Page F",
+      name: "Rejected",
       uv: 6,
     },
   ];
