@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./carousel.css";
-import valorant from "../../images/valorant.png";
-import ml from "../../images/ml.png";
-import genshin from "../../images/genshin.png";
+import valorant from "../../../images/valorant.png";
+import ml from "../../../images/ml.png";
+import genshin from "../../../images/genshin.png";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

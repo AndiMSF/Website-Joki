@@ -2,9 +2,12 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import './forgotPassword.css'
-import neon from "../../images/Neon-1.png"
+import neon from "../../../images/Neon-1.png"
 import Form from "react-bootstrap/Form"
+import { useNavigate } from 'react-router-dom'
 const ForgotPassword = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="card__container">
     <Card style={{ border:"0", height: "34.563rem", width: '42.563rem', flexDirection: "row", gap: "0.625rem", flexShrink: "0", borderRadius: "15px 15px 15px 15px"}}>
@@ -24,7 +27,7 @@ const ForgotPassword = () => {
           </div>
         </Form>
           <div className='card__button'>
-            <Button id="button__daftar">Kirim</Button>
+            <Button id="button__daftar" onClick={() => navigate("/login")}>Kirim</Button>
           </div>
       </Card.Body>
     </Card>

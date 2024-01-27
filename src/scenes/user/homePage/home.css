@@ -21,6 +21,7 @@
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
+  flex: 1;
 }
 
 .landing_page__middle h1 {
@@ -35,11 +36,12 @@
 
 .card__container__lp {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   align-self: stretch;
   flex-wrap: wrap;
   gap: 20px;
+  flex: 1;
 }
 
 .card {
@@ -224,6 +226,10 @@
     display: none;
   }
 
+  .landing_page__top {
+    padding-bottom: 0px;
+  }
+
   .landing_page__bottom__left h1 {
     font-size: 1.5rem;
   }
@@ -234,6 +240,48 @@
 
   .landing_page__bottom__right h2 {
     font-size: 0.5rem;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0px 0px 10px 2px var(--Primary-Color);
+    height: 100%;
+    
+  }
+
+  .sidebar svg {
+    padding: 1rem;
+  }
+
+  .sidebar__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .line {
+    width: 80%;
+    background-color: var(--Gray-300);
+    height: 1px;
+    margin: 0 1em;
+  }
+
+  .sidebar h1 {
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0.75em 1em 0.75em 0;
+    width: 100%;
+    text-align: right;
+    
+  }
+
+  .sidebar h1:hover {
+    background-color: var(--Gray-300)
   }
 
 }

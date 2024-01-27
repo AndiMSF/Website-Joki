@@ -1,9 +1,14 @@
 import "./navbar.css";
-import Button from "../../Elements/Button/Button";
+import Button from "../../../Elements/Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = (props) => {
+  const handleClick = () => {
+    props.navbarClick(!props.sidebarCondition); // Pass the opposite value of isClick
+    console.log("CLICK HAMBURGER " + !props.sidebarCondition);
+  };
+
   return (
     <div className="navbar__container">
       <h1>Easy Joki</h1>
@@ -23,12 +28,12 @@ const Navbar = (props) => {
         <h1>Daftar Harga</h1>
       </div>
       <div className="navbar__right">
-        <Button title="Add Game" />
-        <Button title="Masuk" />
+        <Button title="Add Game" href="/add-game" />
+        <Button title="Masuk" href="/login" />
       </div>
       {/* Hamburger Menu */}
       <div className="hamburger__container">
-      <FontAwesomeIcon icon={icon({name: 'burger', family: 'classic', style: 'solid'})} />
+        <FontAwesomeIcon icon={faBars} onClick={handleClick} />
       </div>
     </div>
   );

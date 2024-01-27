@@ -30,6 +30,10 @@
     padding: 0.5rem 0.75rem;
 }
 
+.forgot__password:hover {
+    cursor: pointer;
+}
+
 .card__button #button__daftar {
     background-color: var(--Primary-Color);
     border-color: var(--Primary-Color);

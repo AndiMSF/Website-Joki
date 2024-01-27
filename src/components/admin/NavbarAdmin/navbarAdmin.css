@@ -1,0 +1,70 @@
+.navbar__admin {
+  display: flex;
+  width: 250px;
+  padding: 2em 1em;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+  background: var(--Almost-Dark);
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  height: 40px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 12px;
+  background: var(--Primary-Color, #7749f8);
+}
+
+.logo h1 {
+  flex: 1 0 0;
+  color: var(--Gray-100, #f8f9fa);
+
+  /* Semi-Bold / H5 Heading */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.link_active, .content .link {
+  display: flex;
+  padding: 1em;
+  align-items: flex-start;
+  align-self: stretch;
+  /* Selected Links */
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.link_active {
+  background-color: white;
+}
+
+.content .link:hover h1 {
+  color: #fff;
+}
+
+.link_active h1, .content .link h1 {
+  color: var(--Primary-Color, #7749f8);
+
+  /* Semi-Bold / H6 Heading */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}

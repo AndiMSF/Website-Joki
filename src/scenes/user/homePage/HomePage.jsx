@@ -1,16 +1,48 @@
 import "./home.css";
-import Navbar from "../../components/Navbar/Navbar";
-import ControlledCarousel from "../../components/Carousel/ControlledCarousel";
-import valorant from "../../images/valorant.png";
-import ml from "../../images/ml.png";
-import genshin from "../../images/genshin.png";
-import Button from "../../Elements/Button/Button";
+import Navbar from "../../../components/user/Navbar/Navbar";
+import ControlledCarousel from "../../../components/user/Carousel/ControlledCarousel";
+import valorant from "../../../images/valorant.png";
+import ml from "../../../images/ml.png";
+import genshin from "../../../images/genshin.png";
+import Button from "../../../Elements/Button/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
+  const [navbarClick, setNavbarClick] = useState(false);
+
+  const handleNavbarClick = (value) => {
+    setNavbarClick(value);
+  };
+
   return (
     <div className="content__container">
+      {/* If Hamburger Active / isClick true */}
+      {navbarClick && (
+        <div className="sidebar">
+          <FontAwesomeIcon
+            icon={faTimes}
+            onClick={() => setNavbarClick(!navbarClick)}
+          />
+          <div className="sidebar__content">
+            <h1>Beranda</h1>
+            <h1>Fitur</h1>
+            <h1>Daftar Harga</h1>
+            <h1>Add Game</h1>
+            <div className="line"></div>
+            <h1>Masuk</h1>
+            <h1>Keluar</h1>
+          </div>
+        </div>
+      )}
+
       <div className="landing_page__top">
-        <Navbar isBeranda={true} />
+        <Navbar
+          isBeranda={true}
+          navbarClick={handleNavbarClick}
+          sidebarCondition={navbarClick}
+        />
         <ControlledCarousel />
       </div>
       <div className="landing_page__middle">

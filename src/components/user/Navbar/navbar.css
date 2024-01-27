@@ -57,14 +57,13 @@ div.navbar__middle h1:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
   }
 
   .hamburger__container:hover {
     background-color: var(--Gray-300);
     cursor: pointer;
   }
-
 
   .hamburger__container .line {
     height: 10px;
@@ -78,4 +77,5 @@ transition: background-color 0.3s ease;
   .navbar__right {
     display: none;
   }
+
 }
