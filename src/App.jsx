@@ -11,7 +11,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import HomePageAdmin from "./scenes/admin/homePageAdmin/HomePageAdmin";
 import OrdersAdmin from "./scenes/admin/ordersAdmin/OrdersAdmin";
-import NavbarAdmin from "./components/admin/NavbarAdmin/NavbarAdmin";
+import SidebarAdmin from "./components/admin/SidebarAdmin/SidebarAdmin";
 
 function App() {
   return (
@@ -26,11 +26,11 @@ function App() {
           {/* Admin */}
           <Route
             path="/admin"
-            element={<NavbarAdmin>{<HomePageAdmin />}</NavbarAdmin>}
+            element={<SidebarAdmin>{<HomePageAdmin />}</SidebarAdmin>}
           />
           <Route
             path="/admin/orders"
-            element={<NavbarAdmin>{<OrdersAdmin />}</NavbarAdmin>}
+            element={<SidebarAdmin>{<OrdersAdmin />}</SidebarAdmin>}
           />
           {/* <Route path="/admin/transactions" element={<TransactionsAdmin />} />
           <Route path="/admin/games" element={<GamesAdmin />} />

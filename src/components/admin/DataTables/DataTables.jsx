@@ -11,20 +11,33 @@ const DataTables = () => {
     columns,
     data,
   };
+
+  // Set Default Data Rows When Page is Rendering
+  const paginationOptions = {
+    rowsPerPageText: "Rows per page:",
+    rangeSeparatorText: "of",
+    selectAllRowsItem: true,
+    selectAllRowsItemText: "All",
+  };
+
   return (
-    <DataTableExtensions {...tableData}>
-      <DataTable
-        columns={columns}
-        data={data}
-        sortIcon={<FontAwesomeIcon icon={faSort} />}
-        noHeader
-        defaultSortField="id"
-        defaultSortAsc={true}
-        pagination
-        highlightOnHover
-        dense
-      />
-    </DataTableExtensions>
+    <div className="data_table">
+      <DataTableExtensions {...tableData}>
+        <DataTable
+          columns={columns}
+          data={data}
+          sortIcon={<FontAwesomeIcon icon={faSort} />}
+          noHeader
+          defaultSortField="id"
+          defaultSortAsc={true}
+          pagination
+          highlightOnHover
+          dense
+          paginationPerPage={30} // This is to set the perPage value for the DataTable
+          paginationComponentOptions={paginationOptions}
+        />
+      </DataTableExtensions>
+    </div>
   );
 };
 

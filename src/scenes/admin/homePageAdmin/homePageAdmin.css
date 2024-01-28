@@ -49,7 +49,7 @@
 
 .dashboard__container__top__right .profile img {
   height: auto;
-  max-width: 100%;
+  width: 100%;
   border-radius: 50%;
 }
 
@@ -167,10 +167,5 @@ p {
   color: var(--Almost-Dark);
 }
 
-/* History Table */
 
-.history {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 1em 2em;
-}
+

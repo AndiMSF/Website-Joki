@@ -1,5 +1,4 @@
 import "./homePageAdmin.css";
-import ProfilePhoto from "../../../images/neon.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart,
@@ -10,19 +9,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Charts from "../../../components/admin/Charts/Charts";
 import DataTables from "../../../components/admin/DataTables/DataTables";
+import NavbarAdmin from "../../../components/admin/NavbarAdmin/NavbarAdmin";
 
 const HomePageAdmin = () => {
   return (
     <div className="dashboard__container__admin">
-      <div className="dashboard__container__top">
-        <h1>Dashboard</h1>
-        <div className="dashboard__container__top__right">
-          <h2>Andi Muhammad Satria Fadhil</h2>
-          <div className="profile">
-            <img src={ProfilePhoto} alt="Profile Photo" />
-          </div>
-        </div>
-      </div>
+      <NavbarAdmin title="Dashboard" />
       <div className="dashboard__container__middle">
         <div className="dashboard__container__middle__top">
           <h2>Status Pesanan / Januari</h2>
@@ -84,9 +76,8 @@ const HomePageAdmin = () => {
         <h2>Grafik Pesanan / Januari</h2>
         <Charts />
       </div>
-      <div className="history">
-        <DataTables />
-      </div>
+
+      <DataTables />
     </div>
   );
 };
