@@ -38,8 +38,12 @@ export const columns = [
     sortable: false,
     selector: "null",
     cell: (d) => [
-      <FontAwesomeIcon key={d.title} icon={faPen} style={{marginRight: "10px"}}/>,
-      <FontAwesomeIcon key={d.title} icon={faTrash} />,
+      <FontAwesomeIcon
+        key={d.title}
+        icon={faPen}
+        style={{ marginRight: "10px", opacity: 0.4 }}
+      />,
+      <FontAwesomeIcon key={d.title} icon={faTrash} style={{ opacity: 0.4 }} />,
     ],
   },
 ];

@@ -10,6 +10,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import HomePageAdmin from "./scenes/admin/homePageAdmin/HomePageAdmin";
+import OrdersAdmin from "./scenes/admin/ordersAdmin/OrdersAdmin";
+import NavbarAdmin from "./components/admin/NavbarAdmin/NavbarAdmin";
 
 function App() {
   return (
@@ -22,7 +24,17 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
 
           {/* Admin */}
-          <Route path="/admin/" element={<HomePageAdmin />} />
+          <Route
+            path="/admin"
+            element={<NavbarAdmin>{<HomePageAdmin />}</NavbarAdmin>}
+          />
+          <Route
+            path="/admin/orders"
+            element={<NavbarAdmin>{<OrdersAdmin />}</NavbarAdmin>}
+          />
+          {/* <Route path="/admin/transactions" element={<TransactionsAdmin />} />
+          <Route path="/admin/games" element={<GamesAdmin />} />
+          <Route path="/admin/prices" element={<PricesAdmin />} /> */}
 
           {/* User */}
           <Route path="/order/valorant" element={<OrderPage />} />
